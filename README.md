@@ -3,13 +3,21 @@ Purpose
 This is an example REST API for a social media site that uses neo4j and express. Some of the features you will find here are:
 
 -Best practice of module creation for integration testing (actual integration testing performed using supertest-as-promised and mocha)
+
 -Unit testing (using mocha)
+
 -OAuth login 
+
 -Friend lists, sending requests, and resolving requests
+
 -Creating, updating, and searching users
+
 -Sending messages between users
+
 -Rotating access logs (using morgan)
+
 -Best practice for storing oauth information, database information, etc. securely
+
 -Serving lists of static information to be consumed on the front-end
 
 The main purpose is to be used for mobile apps, so it does not use modules like passportJS to handle OAuth. It does so by taking the provider the user is using, their uuid for that providers site, and the accessToken retrieved from the oauth provider. This information is validated with each put and post request in the endpoints/middleware.js router. When implemented, HTTPS should be used to protect this information. Our current production setup uses NGINX as a load-balancer and to proxy HTTPS requests, something I can describe in detail if there is interest.
@@ -26,7 +34,9 @@ After setting up neo4j, you can replace the dbURL in modules/constants.js with t
 	...
 
 You will also need to obtain facebook and google oauth app id's and secrets.
+
 -Facebook developer console: https://developers.facebook.com/
+
 -Google developer console: https://console.developers.google.com/project/_/apiui/credential
 
 In order to install the dependencies, from the root of the project, run the following command in terminal or cmd:
