@@ -1,0 +1,7 @@
+#It will be best practice to uncomment this line when you deploy your code, to keep your
+#oauth information and database information kept secret.
+#You can read more about this in the config.js file
+#modules/config.js
+log/
+npm-debug.log
+nohup.out
